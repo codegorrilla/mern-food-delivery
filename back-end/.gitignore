@@ -1,1 +1,8 @@
+# Directories and files
 node_modules/
+
+# Environment variables
+.env
+
+# Uploaded media files
+uploads/

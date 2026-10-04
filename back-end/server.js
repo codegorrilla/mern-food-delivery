@@ -10,7 +10,7 @@ import orderRouter from "./routes/orderRoute.js";
 
 //app config
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 //middleware
 app.use(express.json());
@@ -27,9 +27,9 @@ app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 
 app.get("/", (req, res) => {
-  res.send("API working.");
+	res.send("API working.");
 });
 
 app.listen(port, () => {
-  console.log(`Server running successfully at http://localhost:${port}`);
+	console.log(`Server running successfully at http://localhost:${port}`);
 });
